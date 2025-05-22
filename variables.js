@@ -21,7 +21,7 @@ export function getVariables() {
 		{ variableId: 'recording_timecode', name: 'Recording timecode' },
 		{ variableId: 'recording_timecode_hh', name: 'Recording timecode Hours' },
 		{ variableId: 'recording_timecode_mm', name: 'Recording timecode Minutes' },
-		{ variableId: 'recording_timecode_sa', name: 'Recording timecode Seconds' },
+		{ variableId: 'recording_timecode_ss', name: 'Recording timecode Seconds' },
 		{ variableId: 'stream_timecode', name: 'Stream Timecode' },
 		{ variableId: 'stream_timecode_hh', name: 'Stream Timecode Hours' },
 		{ variableId: 'stream_timecode_mm', name: 'Stream Timecode Minutes' },
