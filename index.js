@@ -575,6 +575,10 @@ class OBSInstance extends InstanceBase {
 				} else {
 					this.states.recording = 'Stopped'
 					this.setVariableValues({ recording_timecode: '00:00:00' })
+					this.setVariableValues({ recording_timecode_hh: '00' })
+					this.setVariableValues({ recording_timecode_mm: '00' })
+					this.setVariableValues({ recording_timecode_ss: '00' })
+
 				}
 			}
 			if (data.outputPath) {
@@ -951,6 +955,9 @@ class OBSInstance extends InstanceBase {
 			this.setVariableValues({
 				streaming: streamStatus.outputActive ? 'Live' : 'Off-Air',
 				stream_timecode: this.states.streamingTimecode,
+				stream_timecode_hh: this.states.streamingTimecode[0].split(':')[0],
+				stream_timecode_mm: this.states.streamingTimecode[0].split(':')[1],
+				stream_timecode_ss: this.states.streamingTimecode[0].split(':')[2],
 				output_skipped_frames: streamStatus.outputSkippedFrames,
 				output_total_frames: streamStatus.outputTotalFrames,
 				kbits_per_sec: kbits,
@@ -977,6 +984,9 @@ class OBSInstance extends InstanceBase {
 			this.setVariableValues({
 				recording: this.states.recording,
 				recording_timecode: this.states.recordingTimecode,
+				recording_timecode_hh: this.states.recordingTimecode[0].split(':')[0],
+				recording_timecode_mm: this.states.recordingTimecode[0].split(':')[1],
+				recording_timecode_ss: this.states.recordingTimecode[0].split(':')[2],
 				recording_path: this.states.recordDirectory,
 			})
 		}

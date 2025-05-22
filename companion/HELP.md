@@ -118,8 +118,14 @@ This module will allow you to control OBS Studio using the built-in WebSocket Se
 - recording_file_name
 - recording_path
 - recording_timecode
+- recording_timecode_hh
+- recording_timecode_mm
+- recording_timecode_ss
 - streaming
 - stream_timecode
+- stream_timecode_hh
+- stream_timecode_mm
+- stream_timecode_ss
 - stream_service
 - kbits_per_sec (Amount of data per second (in kilobits) transmitted by the stream encoder)
 - render_missed_frames
