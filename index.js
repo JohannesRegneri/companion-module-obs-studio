@@ -1030,6 +1030,8 @@ class OBSInstance extends InstanceBase {
 				let sceneName = scene.sceneName
 				this.sceneChoices.push({ id: sceneName, label: sceneName })
 				this.buildSourceList(sceneName)
+
+				this.getSourceFilters(sceneName)
 			})
 			this.updateActionsFeedbacksVariables()
 		}
